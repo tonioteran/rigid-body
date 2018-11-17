@@ -8,6 +8,12 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread")
 set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES /usr/local/lib ${CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES})
 
+###########
+# Eigen
+###########
+find_package( Eigen3 REQUIRED )
+include_directories(${EIGEN3_INCLUDE_DIR})
+
 # ----- Code directories:
 # INCLUDE_DIRECTORIES( "rigidBody" )
 # ADD_SUBDIRECTORY(    "RigidBody" )
